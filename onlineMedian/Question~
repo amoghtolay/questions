@@ -1,0 +1,36 @@
+You've been hired by the international soccer society to divide players into two teams. You'll be given the rankings of each player as and when he registers, and you have to create two teams subject to the following constraint:
+1. The size of the two teams will be same.
+2. The teams will be as UNBALANCED as possible. What this means is that you have to place all lower ranked players in one team, and all higher ranked players in the other to make the strength of the competing teams as lopsided as possible.
+
+You have to decide the refree of this match from amognst these players such that the refree couldn't be accomodated in either of the two teams. You'll be given the rankings of the players one by one and can be asked to tell the ranking of the refree at any point (Till this particular point, it is ensured that there are 2N+1 number of players - N players on each side and one refree)
+
+Input:
+In each line, you'll be given one of the following three strings:
+1. 'm' : An occurence of 'm' denotes that you need to output the ranking of the refree till this point.
+2. 'e' : This indicates the end of the test-case and your program should terminate at this point.
+3. A number between 1 and 11000, where each integer denotes the ranking of the player who is registering.
+
+Its been ensured that 'm' occurs only after the printing of 2N+1 players, so that the refree can be unambigously decided based on the fact that he's the only person left after dividing the players into teams which are as lopsided as possible.
+The number of players registering is less than 1000000.
+
+Output:
+At the occurence of every 'm', output the ranking of the player who is the refree till that point.
+
+Example:
+INPUT:
+800
+350
+698
+m
+95
+1000
+265
+963
+856
+9000
+m
+e
+
+OUTPUT:
+698
+800

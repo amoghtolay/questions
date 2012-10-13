@@ -1,0 +1,19 @@
+Little Jerry was once playing with his numbers. He had just learnt subtraction, so he was arranging numbers together which had a difference of K. But then his elder brother comes, and shuffles all these numbers and also adds new numbers to the list. Now, the number of pairs which had difference of K might change. 
+Can you help Jerry find out the number of pairs in this randomly shuffled list on N distinct elements which have a difference of K?
+
+Constraints:
+N<=10^5
+K>0 and K<1e9
+
+Input Format:
+1st line contains N & K (integers).
+2nd line contains N numbers of the set. All numbers are distinct.
+Output Format:
+One integer saying the no of pairs of numbers that have a diff K.
+
+Sample Input:
+5 2
+1 5 3 4 2
+
+Sample Output:
+3

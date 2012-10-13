@@ -1,0 +1,42 @@
+There's a shipping company, which ships goods across various cities in India. But they have only one-way flights from one city to another. Now they have expanded their operations to such an extent, that it is now becoming difficult for them to keep track of which cities they can service.
+So they have hired you to make a program that can identify if a product can go from one city to another.
+Basically, you'll be given a list of one-way connections between cities. (City A is connected to City B does NOT imply that City B is connected to City A). After this list has been provided, you'll be given a set of ordered pairs of cities and asked if a package can be taken from the first city to the second city using the above one-way flight connections. The package can go via intermediate cities, there isn't a bound on the time. You just have to tell if the package can be shipped from city 1 to city 2.
+
+Input:
+The first line tells you the number of test-cases (T). The following set of lines are repeated T times:
+The first line of this testcase contains two space seperated numbers. The first number is the number of cities (numCities). (If number of cities is 'x', then cities are numbered from '1' to 'x'). The second number is the number of one-way connections between the cities (numEdges).
+The next 'numEdges' number of lines contain the connections. An entry '3 5' indicates that city 3 is connected to city 5, ie. a package can be shipped from city 3 to city 5.
+
+After these lines, the connections have all been told. Now, the next line consists of the number of questions that are going to be asked(numQues). 
+The following 'numQues' lines contain a string in the format city1?city2 (note: the city numbers are seperated by a '?' and not a space). This asks if city1 is connected to city2.
+
+Output:
+Your output should be of 'numQues' number of lines. Each line should either be 'Route Exists' or 'Route Doesn't Exist'. Please note the strings should be exactly as shown (including case and spaces).
+For eg. if the string is : c1?c2 and there exists a path such that a package can be sent from c1 to c2, then output 'Route Exists', otherwise output 'Route Doesn't Exist'.
+
+Example:
+INPUT:
+2
+5 4
+1 3
+2 5
+1 2
+3 4
+3
+1?5
+1?4
+2?1
+4 3
+1 2
+2 3
+4 1
+2
+2?1
+1?3
+
+Output:
+Route Exists
+Route Exists
+Route Doesn't Exist
+Route Doesn't Exist
+Route Exists
