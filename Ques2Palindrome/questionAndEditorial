@@ -1,0 +1,42 @@
+Difficulty:
+Easy
+
+Prerequisites:
+Elementary logic and arithmetic
+
+Question:
+
+In Math-World, each student is issued a unique ID which is a palindromic number. This ensures that the students can easily remember their ID. But the administration is afraid of a problem. It is afraid that if it keeps a very small ID, then it may soon run out of unique palindrome numbers. Thus, it has hired you as they've run out of mathematicians and programmers. So, they tell you the problem and then ask you to solve the following problem. 
+For a n-digit palindrome, what is the kth palindrome (if arranged in ascending order) that can be formed?
+For eg. In the list of 2 digit palindromes, the 7th palindrome is 77 (1st being 11, 2nd being 22 and so on).
+The input will be of the form of an ordered pair n,k where n<=9. Find the kth n-digit palindrome.
+
+Note: This problem is pretty elementary to such an expereinced person as you, and so the administration asks you to solve it as fast as possible, so try and minimize the running time of your code as much as possible.
+Input
+The first line of the input contains T, the number of test cases that follow. The following T lines contain two values separated by a space. The first one is n (number of digits in the palindrome) and the next is k (the kth number in ascending order to be found)
+
+Output
+The output should be of T lines, where each line has the corresponding output of the test case. That is line 2 will contain kth n-digit palindrome for the 2nd test case.
+
+Example
+
+Input:
+3
+4,9
+7,50
+9,120
+
+Output:
+1881
+1049401
+101191101
+
+Solution:
+The trick to solving this question is that any palindrome number can be formed by its constituent half part. For eg. The number 105501 is the 6th 6-digit palindrome number. Observe that its constituent half part, ie. 105 is the 6th 3-digit number. That is, since the least significant bit of the smaller number becomes the center of the larger number, adding 1 to it gives the next palindrome number.
+One thing that required checking was whether the n-digit palindrome which was required had odd number of digits or even, ie. Whether n was odd or even.
+This is necessary because if the number of digits is odd, then the least significant bit of the constituent half part need not be repeated, but if the number of digits was even, it had to be repeated while creating the number.
+For eg.
+The 50th 6 digit palindrome is the 50th 3 digit number, repeated in reverse order and concatenated, which gives 149941
+Similarly, for odd number of digits, the 50th 5 digit number is the 50th 3 digit number, with all but the LSB repeated, ie. 14941
+
+The code is pretty straightforward and easy to understand.

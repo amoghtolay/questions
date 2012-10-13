@@ -1,0 +1,43 @@
+Difficulty:
+Easy
+
+Prerequisites:
+Elementary logic
+
+
+Question:
+
+In an examination, the students are given a match-the-following question. In the question, two sets of bubbles are listed on two sides. Some of the bubbles on the left will be joined to exactly one bubble on the right.
+The students are asked to draw straight lines from the left set of bubbles to the right set of bubbles. You observe that none of the questions have answers in such a way that 3 or more lines are coincident. That is, there are two lines creating a point of intersection. Also, since the student doesn't know the answer to all questions, he might answer questions by skipping them. That is, he might just join the 4500th question with the 6th answer without answering the previous 4499 questions. Knowing the number of answered bubbles on both sides find the number of points of intersections. 
+
+Input
+1st line mentions the number of test cases that follow. The subsequent test cases are arranged as follows:
+Topmost line for that test case is the number of answered bubbles on each side(n). After that the following n lines contain the correct matching as ordered pairs, for eg 2 1 means the 2nd bubble on the left is matched to the 1st bubble on the right. The bubble counting starts from the top with 1 being the topmost.
+
+Output
+The output has T lines containing the number of intersections for each test case in order.
+
+Example
+
+Input:
+2
+2
+4 10
+6 2
+2
+5 8
+8 4
+
+Output:
+1
+1
+
+Solution:
+This problem could be either solved efficiently, but it wasn't really required as the constraints were not that stringent. The easiest way was to check how many pairs of lines (between questions and answers) intersected. To do this the most naive method (and a little difficult to code mathematically) was to write down the equations of each of the connections, and then check how many pairs of these equations have a point of intersection. It was mentioned in the question that no 3 lines can have a common point of intersection, so this checking wasn't needed.
+Another easier solution was to simply check all connected pairs, and find if the order of  the two lines (on the question side) is opposite to that on the answer's side. A one line code for this would be just to check if:
+( ques[i] – ques[j] ) * ( ans[i] – ans[j] ) < 0
+for any pair of connections i and j.
+That is, if there is a flip while moving from the question side to the answer's side, it is a point of intersection.
+Another effecient solution would use a divide and conquer technique to solve the problem. This problem is an adaptation of the problem that asks for counting the number of inversions in a permutation of numbers. We know that since we can order this list of elements in O(nlogn), we should be able to come up with an algorithm which counts the number of swaps required while sorting. Thus, a simple modification of the merge sort algorithm can solve this question effeciently.
+
+I've presently written an O(n^2) solution.

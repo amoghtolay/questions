@@ -1,0 +1,22 @@
+Calculate the sum of all alternate prime numbers whose value is less than n. By alternate we mean, if we arrange all primes in ascending order, then add all alternate (odd placed primes) which are less than number n. (Number n need not be a prime number)
+
+Input Format:
+The first line of input contains the number of test cases T.
+The subsequent T lines contain the number n for which the sum has to be output.
+ 
+Output Format:
+T lines where each line contains the sum of all alternate primes which are less than n.
+ 
+Constraints:
+1 <= N <= 10^15
+ 
+Sample Input:
+2
+10
+5
+ 
+Sample Output:
+7
+2
+ 
+
